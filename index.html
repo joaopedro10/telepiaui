@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telepiauí</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <div class="container">
+        <div class="info-panel">
+            <header>
+                <img class="logo" src="logo.png">
+                <h1>Telepiauí</h1>
+                <p style="margin-left: 14px;"><a id="link_loja">Loja</a> • <a id="link_sobre">Sobre</a></p>
+            </header>
+            <div class="statistics-panel">
+                <h2>Estatísticas da cobertura de telefonia móvel no Piauí</h2>
+                <p>Selecione um município para ver as estatísticas referentes a ele.</p>
+            </div>
+        </div>
+        <div class="map-panel">
+            <div class="map-container">
+                <img class="map-image" src="Brazil_Piaui_location_map_edit.svg" alt="Mapa do Piauí">
+                <div class="municipio-label" style="top: 38.3%; left: 58.6%; transform: translate(-42.695px, -11px);" onclick="showEstatisticas('Água_Branca')">Água Branca</div>
+                <div class="municipio-label" style="top: 18.9%; left: 64.0%; transform: translate(-25.67px, -11px);" onclick="showEstatisticas('Barras')">Barras</div>
+                <div class="municipio-label" style="top: 75.9%; left: 31.5%; transform: translate(-37.68px, -11px);" onclick="showEstatisticas('Bom_Jesus')">Bom Jesus</div>
+                <div class="municipio-label" style="top: 25.8%; left: 66.1%; transform: translate(-44.015px, -11px);" onclick="showEstatisticas('Campo_Maior')">Campo Maior</div>
+                <div class="municipio-label" style="top: 64.5%; left: 53.8%; transform: translate(-47.695px, -11px);" onclick="showEstatisticas('Canto_do_Buriti')">Canto do Buriti</div>
+                <div class="municipio-label" style="top: 92.0%; left: 18.8%; transform: translate(-31.345px, -11px);" onclick="showEstatisticas('Corrente')">Corrente</div>
+                <div class="municipio-label" style="top: 14.9%; left: 65.0%; transform: translate(-40.025px, -11px);" onclick="showEstatisticas('Esperantina')">Esperantina</div>
+                <div class="municipio-label" style="top: 48.7%; left: 52.6%; transform: translate(-29.68px, -11px);" onclick="showEstatisticas('Floriano')">Floriano</div>
+                <div class="municipio-label" style="top: 51.7%; left: 66.7%; transform: translate(-25.67px, -11px);" onclick="showEstatisticas('Oeiras')">Oeiras</div>
+                <div class="municipio-label" style="top: 3.1%; left: 72.2%; transform: translate(-32.35px, -11px);" onclick="showEstatisticas('Parnaíba')">Parnaíba</div>
+                <div class="municipio-label" style="top: 64.9%; left: 82.1%; transform: translate(-36.025px, -11px);" onclick="showEstatisticas('Paulistana')">Paulistana</div>
+                <div class="municipio-label" style="top: 52.3%; left: 77.1%; transform: translate(-22.67px, -11px);" onclick="showEstatisticas('Picos')">Picos</div>
+                <div class="municipio-label" style="top: 19.3%; left: 72.2%; transform: translate(-24.67px, -11px);" onclick="showEstatisticas('Piripiri')">Piripiri</div>
+                <div class="municipio-label" style="top: 67.4%; left: 64.8%; transform: translate(-57.04px, -11px);" onclick="showEstatisticas('São_João_do_Piauí')">São João do Piauí</div>
+                <div class="municipio-label" style="top: 75.2%; left: 57.7%; transform: translate(-68.71px, -11px);" onclick="showEstatisticas('São_Raimundo_Nonato')">São Raimundo Nonato</div>
+                <div class="municipio-label" style="top: 61.5%; left: 70.1%; transform: translate(-55.36px, -11px);" onclick="showEstatisticas('Simplício_Mendes')">Simplício Mendes</div>
+                <div class="municipio-label" style="top: 28.9%; left: 56.1%; transform: translate(-30.68px, -11px);" onclick="showEstatisticas('Teresina')">Teresina</div>
+                <div class="municipio-label" style="top: 54.1%; left: 28.3%; transform: translate(-25.67px, -11px);" onclick="showEstatisticas('Uruçuí')">Uruçuí</div>
+                <div class="municipio-label" style="top: 44.4%; left: 72.7%; transform: translate(-52.92px, -11px);" onclick="showEstatisticas('Valença_do_Piauí')">Valença do Piauí</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal_overlay" id="modal_loja">
+        <div class="modal">
+            <a class="close_modal" id="close_modal_loja">
+                <span class="material-symbols-outlined">close</span>
+            </a>
+            <div class="modal_content">
+                <h2>Loja</h2>
+                <section class="cards">
+                    <a href="https://www.amazon.com.br/Chip-4G-Triplo-Corte-Claro/dp/B089NYS4DD/" target="_blank">
+                        <div class="card">
+                            <div class="card_image"><img src="chip1.jpg" alt=""></img></div>
+                            <div class="card_content"><p>Chip Claro 4G</p></div>
+                            <div class="card_info">
+                                <p>28% OFF</p>
+                                <p class="card_price">R$ 9,99</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.amazon.com.br/TIM-Tim-Chip/dp/B0BMDB73JX/" target="_blank">
+                        <div class="card">
+                            <div class="card_image"><img src="chip2.jpg" alt=""></img></div>
+                            <div class="card_content"><p>Chip TIM 4G</p></div>
+                            <div class="card_info">
+                                <p></p>
+                                <p class="card_price">R$ 12,50</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.amazon.com.br/Chip-Vivo-Pr%C3%A9-Pago-Unidade/dp/B08W1RDD5Z/" target="_blank">
+                        <div class="card">
+                            <div class="card_image"><img src="chip3.jpg" alt=""></img></div>
+                            <div class="card_content"><p>Chip Vivo 4G</p></div>
+                            <div class="card_info">
+                                <p></p>
+                                <p class="card_price">R$ 15,00</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.amazon.com.br/Snapdragon-Resistente-totalmente-desbloqueado-T-Mobile/dp/B08L9QQ6RZ/" target="_blank">
+                        <div class="card">
+                            <div class="card_image"><img src="celular1.jpg" alt=""></img></div>
+                            <div class="card_content"><p>Samsung Galaxy S20 FE 5G</p></div>
+                            <div class="card_info">
+                                <p>10% OFF</p>
+                                <p class="card_price">R$ 2.080,00<br></p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.amazon.com.br/Apple-iPhone-13-128-GB-Meia-noite/dp/B09T55NFSR/" target="_blank">
+                        <div class="card">
+                            <div class="card_image"><img src="celular2.jpg" alt=""></img></div>
+                            <div class="card_content"><p>iPhone 13 128GB</p></div>
+                            <div class="card_info">
+                                <p>39% OFF</p>
+                                <p class="card_price">R$ 4.665,56<br></p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.amazon.com.br/Smartphone-Motorola-Moto-128GB-Preto/dp/B0BSXQP3NW/" target="_blank">
+                        <div class="card">
+                            <div class="card_image"><img src="celular3.jpg" alt=""></img></div>
+                            <div class="card_content"><p>Motorola Moto E22</p></div>
+                            <div class="card_info">
+                                <p>33% OFF</p>
+                                <p class="card_price">R$ 869,00<br></p>
+                            </div>
+                        </div>
+                    </a>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="modal_overlay" id="modal_sobre">
+        <div class="modal">
+            <a class="close_modal" id="close_modal_sobre">
+                <span class="material-symbols-outlined">close</span>
+            </a>
+            <div class="modal_content">
+                <h2>Sobre</h2>
+                <p style="margin-bottom: 10px;">Nosso site <b>Telepiauí</b> tem o propósito de auxiliar na análise da cobertura de telefonia móvel nos municípios do estado do Piauí, contendo as estatísticas de área coberta, moradores cobertos e domicílios cobertos por cada operadora nos principais municípios do estado do Piauí.</p>
+                <p style="margin-bottom: 20px;"><b>Fonte:</b> <a href="https://informacoes.anatel.gov.br/paineis/infraestrutura" target="_blank">Anatel</a> (março/2023)</p>
+                <p style="margin-bottom: 10px;">Este site foi feito pelo <b>Grupo 2 do 2º Ano "C" – CEV-Frei</b></p>
+                <p><a href="https://www.instagram.com/jplsilva10/" target="_blank">João Pedro Lopes</a> • <a href="https://www.instagram.com/_brunnoln/" target="_blank">Brunno Lopes</a> • <a href="https://www.instagram.com/pedro._gv/" target="_blank">Pedro Guilherme</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="estatisticas.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
